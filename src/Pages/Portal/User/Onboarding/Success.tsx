@@ -16,14 +16,10 @@ const Success = ({ roleVerified }: { roleVerified: boolean }) => {
           : "Onboarding Successful, You will be verified within 24 hours."}
       </p>
       <div className={styles.buttons}>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="http://mulearn.org/whatsapp-community" target="_blank" rel="noopener noreferrer">
           <button className={styles.button}>Join Whatsapp</button>
         </a>
-        <a
-          href="http://discord.mulearn.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="http://discord.mulearn.org" target="_blank" rel="noopener noreferrer">
           <button className={styles.button}>Discover Discord</button>
         </a>
       </div>
