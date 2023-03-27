@@ -5,7 +5,8 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
-  color: #404d61;
+  transition: all 0.3s ease-in;
+  /* color: #404d61; */
 }
 
 .onboarding_page .form_container h1 {
@@ -98,12 +99,6 @@ form .input {
   width: 100%;
 }
 
-form .form_buttons {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-
 form .form_buttons button,
 .button {
   padding: 10px 50px;
@@ -182,6 +177,8 @@ form .form_buttons button[type="reset"] {
   flex-direction: column;
   /* width: 100vw; */
   height: 100vh;
+  margin: 2rem;
+  text-align: center;
   background-color: #e8f3f7;
 }
 
@@ -198,6 +195,7 @@ form .form_buttons button[type="reset"] {
   flex-direction: column;
   /* width: 100vw; */
   height: 100vh;
+  margin: 2rem;
   background-color: #e8f3f7;
 }
 
@@ -249,11 +247,12 @@ form .form_buttons button[type="reset"] {
     margin-top: 10px;
     margin-left: 0px;
   }
+}
 
-  form .form_buttons {
-    justify-content: center;
-    flex-direction: column;
-  }
+.form_buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* Modal Styles */
@@ -275,4 +274,51 @@ form .form_buttons button[type="reset"] {
   overflow-y: auto;
 }
 
-/* Hide the modal by default */
+.checkbox_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_checkbox {
+  width: min-content;
+  margin: 0;
+  margin: 10px;
+  margin-top: 12px;
+  width: 1rem;
+  /* height: 1rem; */
+}
+
+.form_bottom {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.validation_error_message {
+  position: absolute;
+  padding: 10px 50px;
+  right: 30px;
+  top: 30px;
+  background-color: #5570f2;
+
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.tc_span {
+  color: #6a80f0;
+  text-decoration: underline;
+}
+
+.tc_text {
+  max-width: 20rem;
+}
+
+.validation_error_message p {
+  color: #ffffff;
+}
