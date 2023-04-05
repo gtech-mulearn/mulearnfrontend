@@ -13,7 +13,7 @@ const Success = ({ roleVerified }: { roleVerified: boolean }) => {
       <p>
         {roleVerified
           ? "Woooohh! You successfully registered."
-          : "Onboarding Successful, You will be verified within 24 hours."}
+          : "Woooohh! You successfully registered."}
       </p>
       <div className={styles.buttons}>
         <a href="https://chat.whatsapp.com/HrTvggHyZM93UwW03ngEcf" target="_blank" rel="noopener noreferrer">
