@@ -4,19 +4,20 @@ import Sidebar from "../components/Sidebar";
 
 const DashboardRootLayout = () => {
   return (
-    <Grid templateColumns="repeat(6, 1fr)" bg="gray.50">
+    <Grid
+      templateColumns="repeat(12, 1fr)"
+      bg="gray.50"
+      p={{ base: "20px", lg: "30px" }}
+      gap={6}
+      minHeight={{ lg: "100vh" }}
+    >
       {/* sidebar */}
-      <GridItem
-        as="aside"
-        colSpan={{ base: 6, lg: 1 }}
-        minHeight={{ lg: "100vh" }}
-        p={{ base: "20px", lg: "30px" }}
-      >
+      <GridItem as="aside" colSpan={{ base: 12, lg: 3, xl: 2 }}>
         <Sidebar />
       </GridItem>
 
       {/* main content & navbar */}
-      <GridItem as="main" colSpan={{ base: 6, lg: 4, xl: 5 }} p="40px">
+      <GridItem as="main" colSpan={{ base: 12, lg: 9, xl: 10 }}>
         {/* <Navbar /> */}
         <Outlet />
       </GridItem>
