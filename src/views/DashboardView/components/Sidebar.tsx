@@ -17,8 +17,17 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 
-export default function Sidebar() {
+interface SidebarProps {
+  setTitle: (title: string) => void;
+}
+
+export default function Sidebar({ setTitle }: SidebarProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleItemClick = (index: number, title: string) => {
+    setCurrentIndex(index);
+    setTitle(title); // Call setTitle to update title
+  };
 
   return (
     <Box
@@ -65,7 +74,10 @@ export default function Sidebar() {
             color={currentIndex === index ? "orange.300" : "gray.500"}
             fontWeight="medium"
           >
-            <NavLink to={item.path} onClick={() => setCurrentIndex(index)}>
+            <NavLink
+              to={item.path}
+              onClick={() => handleItemClick(index, item.name)}
+            >
               <ListIcon
                 as={currentIndex === index ? item.activeIcon : item.icon}
                 w="5"
